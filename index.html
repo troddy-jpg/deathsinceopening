@@ -6,23 +6,31 @@
 <!-- linking to PyScript assets -->
 <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
     <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
+	<py-env>
+- worldometer
+- numpy
+	</py-env>
 </head>
 
 <body style = "background-color: #c2d4e7">
 	<div style="    
-    text-align: center;    
+    	text-align: center;    
 		font-size: 4500%;
 		text-align: center;
 		letter-spacing: -.2ch;
 		">
 			76
 	</div>
-	
+	<!-- Put Python code inside the the <py-script> tag -->
+		<py-script>
+import worldometer
 
-    <?php
-      $str = "This is GeeksforGeeks portal";
-      echo "$str.";
-    ?>
+current_deaths = worldometer.deaths_today().get("deaths_today")
+
+display(current_deaths)
+		</py-script>
+
+		  
 </body>
 
 </html>	
