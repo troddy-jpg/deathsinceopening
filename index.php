@@ -14,9 +14,16 @@
 		">
 			76
 	</div>
-	<?PHP
-	echo shell_exec("python3 worldometerapi.py");
-	?>
+	<php
+    $command = escapeshellcmd('/usr/custom/worldometerapi.py');
+    $output = shell_exec($command);
+    echo $output;
+	>
+
+    <?php
+      $str = "This is GeeksforGeeks portal";
+      echo "$str.";
+    ?>
 </body>
 
 </html>	
