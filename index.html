@@ -2,7 +2,10 @@
 <html>
 
 <head>
-
+	<title>Deaths since arrival</title>
+<!-- linking to PyScript assets -->
+<link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
+    <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
 </head>
 
 <body style = "background-color: #c2d4e7">
@@ -14,11 +17,7 @@
 		">
 			76
 	</div>
-	<php
-    $command = escapeshellcmd('/usr/custom/worldometerapi.py');
-    $output = shell_exec($command);
-    echo $output;
-	>
+	
 
     <?php
       $str = "This is GeeksforGeeks portal";
