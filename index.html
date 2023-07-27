@@ -23,7 +23,9 @@
 	</div>
 	<!-- Put Python code inside the the <py-script> tag -->
 		<py-script>
-import worldometer
+#import worldometer
+import numpy
+df = pd.read_csv("views.csv")
 
 current_deaths = worldometer.deaths_today().get("deaths_today")
 
