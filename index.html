@@ -1,18 +1,14 @@
-
-<head>
-</head>
-<body>
-</body>
+<p id="demo"></p>
 
 <script type="text/javascript">
     var sum = 0;
-    let randomTime;
-    incrementDeathCounter();
-
-    function incrementDeathCounter() {
-      sum +=1;
-      randomTime = 0.1 + Math.random();  // generates a random number between 0.1 and 1.1
-      setTimeout(incrementDeathCounter, randomTime * 1000);  // convert randomTime to milliseconds and delay execution
+    function updateSum() {
+      var randomTime = 0.1 + Math.random();  // generates a random number between 0.1 and 1.1
+      setTimeout(function() {
+        sum += 1;
+        document.getElementById("demo").innerHTML = sum;
+        updateSum();
+      }, randomTime * 1000);
     }
-    console.log(sum)
+    updateSum();
 </script>
