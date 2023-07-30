@@ -1,14 +1,18 @@
+
 <head>
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-    <py-env>
-- numpy
-- pandas
-    </py-env>
 </head>
 <body>
-    <py-script>
-        import pandas as pd
-		print ( "hello")
-    </py-script>
 </body>
+
+<script type="text/javascript">
+    var sum = 0;
+    let randomTime;
+    incrementDeathCounter();
+
+    function incrementDeathCounter() {
+      sum +=1;
+      randomTime = 0.1 + Math.random();  // generates a random number between 0.1 and 1.1
+      setTimeout(incrementDeathCounter, randomTime * 1000);  // convert randomTime to milliseconds and delay execution
+    }
+    console.log(sum)
+</script>
